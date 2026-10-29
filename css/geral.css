@@ -1,0 +1,23 @@
+*{
+    
+}
+
+a {
+    text-decoration: none;
+
+    color: var(--color-text);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.img {
+    border-radius: 10px;
+}
+
+.padding {
+    
+}

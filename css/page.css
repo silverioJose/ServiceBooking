@@ -1,0 +1,31 @@
+html, body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: var(--color-background);
+
+    overflow-x: hidden;
+    display: flex;
+    
+    flex-direction: column;
+
+    font-family: 'Playfair', serif;
+
+    color: var(--color-text);
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1;
+}
