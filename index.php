@@ -1,5 +1,6 @@
 <?php 
-    $nome = "Estudio";
+    $pagina = "Início";
+    $empresa = "Nome";
 
     include __DIR__ . "/src/Config/Database.php";
     include __DIR__ . "/src/DAO/ServicoDAO.php";
@@ -20,7 +21,7 @@
             </h1>
             <hr class="line">
             <p class="hero-subtitle">Cuidados profissionais em cada detalhe</p>
-            <a href="" class="btn-primary hero-btn">Agendar Procedimento</a>
+            <a href="agendar.php" class="btn-primary hero-btn">Agendar Procedimento</a>
         </div>
         <div class="hero-img">
             <img class="img" src="public/assets/imgs/salon.jpg" alt="Imagem">
@@ -28,7 +29,7 @@
     </section>
 
     <section class="services">
-        <h1>Conheça os Procedimentos</h1>
+        <h1>Conheça nossos Serviços</h1>
 
         <?php foreach ($servicos as $s) : ?>
             <article class="service-item">
@@ -56,9 +57,9 @@
     <h1 class="title">Onde Estamos</h2>
     <p class="subtitle">Visite o nosso espaço e conheça os serviços presencialmente</p>
 
-    <section class="location">
+    <section class="location" id="contato">
         <div class="location-info">
-            <h2><?= $nome ?></h2>
+            <h2><?= $empresa ?></h2>
             <p><small>Morada</small><br> Rua Exemplo, 123<br>Bairro, Cidade - Estado</p>
             <p><small>Telefone / WhatsApp</small><br> (00) 90000-0000</p>
             <p><small>Funcionamento</small><br>

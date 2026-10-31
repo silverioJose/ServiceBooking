@@ -1,0 +1,81 @@
+.title {
+    font-family: 'Petit';
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-family: 'Playfair';
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.location {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    max-height: 300px;
+    padding: 15px;
+    border: 1px solid var(--color-highlight);
+    border-radius: 15px;
+
+    font-family: 'Playfair';
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.location-info h2 {
+    font-family: 'Petit';
+}
+
+.location p small {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.location-info p {
+    font-size: 20px;
+    margin: 5px 0 10px;
+}
+
+.location p a {
+    margin-right: 10px;
+}
+
+.map {
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 300px;
+
+}
+
+.profissionais {
+    font-family: 'Playfair';
+}
+
+.profissionais h2 {
+    margin-top: 15px;
+    font-family: 'Petit';
+}
+
+.profissionais-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.profissionais-grid div {
+    text-align: center;
+
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--color-highlight);
+    border-radius: 15px;
+}
+
+.profissionais-grid div p span {
+    font-family: monospace;
+}
