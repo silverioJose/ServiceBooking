@@ -1,36 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body class="body">
-    <header class="header">
-        <div class="header-content">
-            <a  class="name"  href="index.html">
-                <img src="" alt="Logo">
-                <span>Nome</span>
-            </a>
-            <div class="nav-menu">
-                <a href="index.html">Início</a>
-                <a href="agendar.html">Agendar</a>
-                <a href="contato.html">Contato</a>
-            </div>
-        </div>
-    </header>
-    <div class="content">
-        
-
-        
+        </main>
     </div>
     <footer class="footer">
         <div class="footer-content footer-col-left">
             <div class="footer-col">
-                <a href="index.html">Início</a>
-                <a href="agendar.html">Agendar</a>
-                <a href="contato.html">Contato</a>
+                <a href="index.php">Início</a>
+                <a href="agendar.php">Agendar</a>
+                <a href="contato.php">Contato</a>
             </div>
 
             <div class="footer-col footer-col-center">

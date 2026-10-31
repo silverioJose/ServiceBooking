@@ -59,3 +59,68 @@
     object-position: center;
     display: block;
 }
+
+.location {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    max-height: 300px;
+    padding: 15px;
+    border: 1px solid var(--color-highlight);
+    border-radius: 15px;
+
+    font-family: 'Playfair';
+}
+
+.location-info h2 {
+    font-family: 'Petit';
+}
+
+.location p small {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.location-info p {
+    font-size: 20px;
+    margin: 5px 0 10px;
+}
+
+.location p a {
+    margin-right: 10px;
+}
+
+.map {
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 300px;
+
+}
+
+@media (max-width: 700px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .location {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.title {
+    font-family: 'Petit';
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: 'Playfair';
+    font-size: 20px;
+}

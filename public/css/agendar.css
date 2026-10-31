@@ -1,0 +1,68 @@
+.agendamento-titulo{
+    font-family: 'Petit';
+
+    margin-bottom: 20px;
+}
+
+.mes {
+    font-family: 'Playfair';
+
+    margin-bottom: 20px;
+}
+
+
+.calendario {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: separate;
+    border-spacing: 2px;
+    text-align: center;
+    font-family:  serif;
+}
+
+.calendario th {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+
+    font-family: 'Playfair';
+}
+
+.calendario td {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    cursor: default;
+    border-radius: 10px;
+    position: relative;
+}
+
+.calendario td:not(.vazio):not(:empty):not(.passado):hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+.calendario td.dia-atual {
+    border: 1px solid var(--color-highlight);
+    font-weight: bold;
+    border-radius: 10px;
+}
+.calendario td.domingo {
+    color: red;
+}
+
+.calendario td.vazio {
+    cursor: default !important;
+    background-color: transparent !important;
+    pointer-events: none;
+}
+
+.calendario td.passado {
+    opacity: 0.4;
+    cursor: default !important;
+    pointer-events: none;
+}
