@@ -24,13 +24,15 @@ if (!defined('BASE_URL')) define('BASE_URL', '/SaaS');
                 <span><?= $empresa ?? 'Nome' ?></span>
             </a>
             <div class="nav-menu">
-                <a href="index.php"
+                <a href="/SaaS/"
                     class="<?= str_contains($uriAtual,  'index.php') ? 'active' : '' ?>">Início</a>
                 <a href="agendar.php"
                     class="<?= str_contains($uriAtual,  'agendar.php') ? 'active' : '' ?>">Agendar</a>
                 <a href="contato.php"
                     class="<?= str_contains($uriAtual,  'contato.php') ? 'active' : '' ?>">Contato</a>
-                <a href="admin/login.php">Login</a>
+                
+                <a href="admin/">Login</a>
+                
             </div>
         </div>
     </header>

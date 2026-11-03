@@ -1,0 +1,59 @@
+.menu {
+    font-family: 'Papyrus';
+    display: flex;
+
+}
+
+.top-bar {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    height: 50px;
+    padding: 0 10px;
+    
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.user {
+    text-align: right;
+}
+
+.user p a{
+    color: red;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 180px;
+
+    position: fixed;
+    top: 50px;
+    left: 0;
+
+    background-color: greenyellow;
+    padding: 0 10px;
+    border-right: 1px solid black;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.adminconteudo {
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+.sidebar-link {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sidebar {
+    
+}

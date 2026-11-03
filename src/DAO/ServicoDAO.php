@@ -11,6 +11,16 @@ class ServicoDAO {
         $this->pdo = $pdo;
     }
 
+    public function getParametros(Servico $servico): array {
+        return [
+            ':nome' => $servico->getNome(),
+            ':descricao' => $servico->getDescricao(),
+            ':duracao_minutos' =>$servico->getDuracaoMinutos(),
+            ':preco' => $servico->getPreco(),
+            ':foto' => $servico->getFoto()
+        ];
+    }
+
     public function listarTodos(): array {
         $sql = "SELECT * FROM servicos ORDER BY id ASC";
         $stmt = $this->pdo->prepare($sql);
@@ -23,6 +33,24 @@ class ServicoDAO {
             $servicos[] = Servico::fromArray($linha);
         }
         return $servicos;
+    }
+
+    public function inserir(Servico $servico): bool {
+        $sql = "INSERT INTO servicos (
+                nome, descricao, duracao_minutos, preco, foto
+            ) VALUES (
+                :nome, :descricao, :duracao_minutos, :preco, :foto
+            )";
+
+        $stmt = $this->pdo->prepare($sql);
+        
+        $sucesso = $stmt->execute($this->getParametros($servico));
+
+        if ($sucesso) {
+            $servico->setId((int) $this->pdo->lastInsertId());
+        }
+
+        return $sucesso;
     }
 
 }
