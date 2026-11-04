@@ -1,5 +1,5 @@
 <?php 
-    $pagina = "Agvendar";
+    $pagina = "Agendar";
 
     date_default_timezone_set('America/Sao_Paulo');
 

@@ -1,0 +1,81 @@
+.admin {
+    font-family: 'Poppins';
+}
+
+.menu {
+    display: flex;
+
+}
+
+.top-bar {
+    background-color: rgb(199, 199, 199);
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    height: 50px;
+    padding: 0 10px;
+    
+    width: 100%;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    
+}
+
+.user {
+    text-align: right;
+}
+
+.user p span {
+    padding: 5px 10px;
+}
+
+.btn-atencao{
+    color: red;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.btn-atencao:hover {
+    background-color: rgba(255, 0, 0, 0.199);
+    
+
+}
+
+.sidebar {
+    height: 100vh;
+    width: 180px;
+
+    position: fixed;
+    top: 50px;
+    left: 0;
+
+    background-color: rgb(199, 199, 199);
+    padding: 0 10px;
+    border-right: 1px solid rgb(148, 148, 148);
+}
+
+.sidebar ul {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.adminconteudo {
+    margin-left: 230px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.sidebar-link {
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.sidebar-link a {
+    display: flex;
+}
+
+.sidebar-link:hover {
+    border: 1px solid black;
+}

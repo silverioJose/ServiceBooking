@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_SESSION['admin_logado']) && $_SESSION['admin_logado'] === true) {
-    header('Location: ../layout/sidebar.php');
+    header('Location: ../painel.php');
     exit;
 }
 
@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($admin && $senha === $admin['senha']) {
                 $_SESSION['admin_logado']= true;
                 $_SESSION['admin_email'] = $admin['email'];
-                $_SESSION['admin_nome'] = $admin['nome'] ?? 'Admintrador';
+                $_SESSION['admin_nome'] = $admin['nome'];
                 
-                header('Location: ../layout/sidebar.php');
+                header('Location: ../painel.php');
                 exit;
             } else {
                 header('Location: ../index.php?erro=dados_incorretos');
