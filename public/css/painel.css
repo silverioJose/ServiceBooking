@@ -5,37 +5,39 @@
 }
 
 .painel a {
-    border: 1px solid rgb(148, 148, 148);
+    border: 1px solid var(--color-border-admin);
     padding: 10px;
     text-align: center;
     border-radius: 8px;
     display: inline-block;
     justify-self: end;
+    background-color: var(--color-highlight2-admin);
 }
 
 .painel a:hover{
-    background-color: #dddddd;
+    border-color: black;
 }
 
 .tabela-servicos {
     margin-top: 15px;
     width: 100%;
+    border: 1px solid var(--color-highlight2-admin);
     
 }
 
 .tabela-servicos th {
-    background-color: rgb(199, 199, 199);
+    background-color: var(--color-background-admin);
     font-weight: bold;
     text-align: left;
     padding: 12px 15px;
 }
 
 .tabela-servicos tbody tr:nth-child(even) {
-    background-color: #f3f3f3;
+    background-color: var(--color-highlight2-admin);
 }
 
 .tabela-servicos td {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid var(--color-highlight-admin);
 }
 
 .tabela-servicos thead tr th {
@@ -54,6 +56,6 @@
 }
 
 .btn-editar:hover {
-    background-color: rgb(199, 199, 199);
+    background-color: var(--color-background-admin);
 }
 

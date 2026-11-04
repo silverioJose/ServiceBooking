@@ -1,19 +1,20 @@
 <?php
+require_once __DIR__ . '/../../config/config.php';
 
-include __DIR__ . "../../src/Config/Database.php";
-include __DIR__ . "../../src/DAO/ServicoDAO.php";
+require_once ROOT_PATH . 'src/Config/Database.php';
+require_once ROOT_PATH . 'src/DAO/ServicoDAO.php';
 
 $pdo = Database::getConexao();
 $sDAO = new ServicoDAO($pdo);
 
 $servicos = $sDAO->listarTodos();
 
-include_once __DIR__ . '/layout/sidebar.php'
+include_once ADMIN_PATH . '/layout/sidebar.php';
 ?>
 
 <div class="painel">
     <H1>Servicos</H1>
-    <a href="">Adicionar</a>
+    <a href="form.php">Adicionar</a>
 </div>
 
 
@@ -44,8 +45,8 @@ include_once __DIR__ . '/layout/sidebar.php'
                         </td>
                         <td><?= $s->getPreco() ?> R$</td>
                         <td>
-                            <a class="btn-editar" href="">Editar</a>
-                            <a class="btn-atencao" href="">Excluir</a>
+                            <a class="btn-editar" href="<?= ADMIN_URL ?>servicos/form.php?id=<?= $s->getId() ?>">Editar</a>
+                            <a class="btn-atencao" href="<?= ADMIN_URL ?>servicos/excluir.php?id=<?= $s->getId() ?>" onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</a>
                         </td>
                         
                     </tr>
@@ -59,5 +60,5 @@ include_once __DIR__ . '/layout/sidebar.php'
 </section>
 
 <?php
-include_once __DIR__ . '/layout/footer.php'
+include_once ADMIN_PATH . '/layout/footer.php';
 ?>

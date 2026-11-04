@@ -8,14 +8,14 @@
 }
 
 .top-bar {
-    background-color: rgb(199, 199, 199);
+    background-color: var(--color-background-admin);
     display: grid;
     grid-template-columns: 180px 1fr;
     height: 50px;
     padding: 0 10px;
     
     width: 100%;
-    border-bottom: 1px solid rgb(148, 148, 148);
+    border-bottom: 1px solid var(--color-border-admin);
     
 }
 
@@ -34,7 +34,7 @@
 }
 
 .btn-atencao:hover {
-    background-color: rgba(255, 0, 0, 0.199);
+    background-color: var(--color-attention);
     
 
 }
@@ -47,15 +47,15 @@
     top: 50px;
     left: 0;
 
-    background-color: rgb(199, 199, 199);
+    background-color: var(--color-background-admin);
     padding: 0 10px;
-    border-right: 1px solid rgb(148, 148, 148);
+    border-right: 1px solid var(--color-border-admin);
 }
 
 .sidebar ul {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-direction: column;
 }
 
@@ -66,10 +66,10 @@
 }
 
 .sidebar-link {
-    border: 1px solid rgb(148, 148, 148);
+    border: 1px solid var(--color-border-admin);
     border-radius: 5px;
     padding: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 }
 
 .sidebar-link a {

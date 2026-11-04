@@ -35,6 +35,22 @@ class ServicoDAO {
         return $servicos;
     }
 
+    public function listarPorId(int $id): ?Servico {
+        $sql = "SELECT * FROM servicos WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+        $stmt->execute();
+
+        $linha = $stmt->fetch();
+
+        if (!$linha) {
+            return null;
+        }
+
+        return Servico::fromArray($linha);
+    }
+
     public function inserir(Servico $servico): bool {
         $sql = "INSERT INTO servicos (
                 nome, descricao, duracao_minutos, preco, foto
@@ -51,6 +67,16 @@ class ServicoDAO {
         }
 
         return $sucesso;
+    }
+
+    public function excluir($id): bool {
+        $sql = "DELETE FROM servicos WHERE id = :id";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        return $stmt->execute([
+            ':id' => $id
+        ]);
     }
 
 }

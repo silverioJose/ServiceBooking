@@ -4,17 +4,16 @@ $uriAtual = $_SERVER['REQUEST_URI'] ?? '';
 
 $empresa = "Estudio";
 
-//Apontamento até a pasta raiz
-if (!defined('BASE_URL')) define('BASE_URL', '/SaaS');
+require_once __DIR__ . '/../../config/config.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pagina ?? 'Nome' ?></title>
-    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>">
 </head>
 <body class="body">
     <header class="header">
@@ -31,7 +30,7 @@ if (!defined('BASE_URL')) define('BASE_URL', '/SaaS');
                 <a href="contato.php"
                     class="<?= str_contains($uriAtual,  'contato.php') ? 'active' : '' ?>">Contato</a>
                 
-                <a href="admin/">Login</a>
+                <a href="<?php echo ADMIN_URL; ?>">Login</a>
                 
             </div>
         </div>
