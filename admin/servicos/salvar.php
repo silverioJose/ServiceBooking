@@ -32,6 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($id)) {
         $sucesso = $sDAO->inserir($s);
+    } else {
+        $sucesso = $sDAO->atualizar($s);
     }
 
     if ($sucesso) {

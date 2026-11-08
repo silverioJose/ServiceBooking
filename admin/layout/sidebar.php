@@ -41,6 +41,9 @@ require_once __DIR__ . '/../../config/config.php';
 
           <li class="sidebar-link"><a href="<?php echo ADMIN_URL; ?>/servicos">Serviços</a></li>
           <li class="sidebar-link"><a href="<?php echo ADMIN_URL; ?>/agendamentos">Agendamentos</a></li>
+          <li class="sidebar-link"><a href="<?php echo ADMIN_URL; ?>/profissionais">Profissionais</a></li>
+          <li class="sidebar-link"><a href="<?php echo ADMIN_URL; ?>/financas">Finanças</a></li>
+
           
         </ul>
 

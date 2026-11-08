@@ -10,47 +10,51 @@ $sDAO = new ServicoDAO($pdo);
 
 include_once ADMIN_PATH . '/layout/sidebar.php';
 
-/* 
-$id = $_GET['id'] ?? $_POST['id'] ?? null;
+$servico = null;
+$tituloPagina = "Novo Serviço";
 
-if ($id) {
-    $s = $sDAO->listarPorId((int)$id);
+if (isset($_GET['id']) && !empty($_GET['id'])) {
+    $id = (int) $_GET['id'];
+    $servico = $sDAO->listarPorId($id);
+
+    if ($servico) {
+        $tituloPagina = "Editar Serviço";
+    }
 }
-
-
-
-<?php if (isset($servico) && $servico->getId()): ?>
-    <input type="hidden" name="id" value="<?= $s->getId(); ?>">
-<?php endif; ?>
-
-*/
 
 
 
 ?>
 
 <div class="painel">
-    <H1>Adicionar</H1>
+    <H1><?= $tituloPagina ?? 'Serviços' ?></H1>
     <a href="<?php echo ADMIN_URL; ?>servicos/index.php">Voltar</a>
 </div>
 
 <form class="form" action="salvar.php" method="POST" enctype="multipart/form-data">
     
+    <?php if ($servico && $servico->getId()): ?>
+        <input type="hidden" name="id" value="<?= $servico->getId(); ?>">
+    <?php endif; ?>
+
     <div>
         <label for="">Nome</label><br>
-        <Input type="text" name="nome" placeholder="Nome do serviço">
+        <Input type="text" name="nome" placeholder="Nome do serviço"
+            value="<?= $servico ? htmlspecialchars($servico->getNome()) : ''; ?>" required>
     </div>
     <div>
         <label for="">Descricao</label><br>
-        <input type="text" name="descricao" placeholder="Descrição do serviço">
+        <textarea name="descricao" rows="6" placeholder="Digite a descrição do serviço..."><?= $servico ? htmlspecialchars($servico->getDescricao()) : ''; ?></textarea>
     </div>
     <div>
         <label for="">Duracao em minutos</label><br>
-        <input type="number" name="duracao_minutos" min="0" step="30" placeholder="00">
+        <input type="number" name="duracao_minutos" min="0" placeholder="00"
+            value="<?= $servico ? $servico->getDuracaoMinutos() : ''; ?>">
     </div>
     <div>
-        <label for="">Preco</label><br>
-        <input type="number" name="preco" min="0" step="10.0" placeholder="0.00">
+        <label for="">Preco - R$</label><br>
+        <input type="number" name="preco" min="0" step="10.0" placeholder="0.00"
+            value="<?= $servico ? $servico->getPreco() : ''; ?>">
     </div>
     <div>
         <label for="">Foto</label><br>

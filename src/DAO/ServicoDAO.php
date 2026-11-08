@@ -68,6 +68,19 @@ class ServicoDAO {
 
         return $sucesso;
     }
+    
+    public function atualizar(Servico $servico) : bool {
+        $sql = "UPDATE servicos SET 
+            nome = :nome, descricao = :descricao, duracao_minutos = :duracao_minutos, preco = :preco, foto = :foto
+            WHERE id = :id";
+
+        $params = $this->getParametros($servico);
+
+        $params['id'] = $servico->getId();
+
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute($params);
+    }
 
     public function excluir($id): bool {
         $sql = "DELETE FROM servicos WHERE id = :id";

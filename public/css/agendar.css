@@ -1,15 +1,13 @@
+.agendamento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .agendamento-titulo{
     font-family: 'Petit';
 
     margin-bottom: 20px;
 }
-
-.mes {
-    font-family: 'Playfair';
-
-    margin-bottom: 20px;
-}
-
 
 .calendario {
     width: 100%;
@@ -18,6 +16,14 @@
     border-spacing: 2px;
     text-align: center;
     font-family:  serif;
+}
+.grid-mes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-mes h3 {
+    text-align: center;
 }
 
 .calendario th {
