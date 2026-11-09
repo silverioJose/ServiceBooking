@@ -1,6 +1,7 @@
 .agendamento {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 35%;
+    gap: 30px;
 }
 
 .agendamento-titulo{
@@ -16,10 +17,12 @@
     border-spacing: 2px;
     text-align: center;
     font-family:  serif;
+    margin-bottom: 20px;
 }
 .grid-mes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    width: 500px;
 }
 
 .grid-mes h3 {
@@ -57,6 +60,13 @@
     font-weight: bold;
     border-radius: 10px;
 }
+
+.selecionado {
+    border: 1px solid black;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
 .calendario td.domingo {
     color: red;
 }
@@ -71,4 +81,62 @@
     opacity: 0.4;
     cursor: default !important;
     pointer-events: none;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.service-grid-col {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.card-servico p {
+    white-space: pre-line;
+}
+
+.card-servico .btn-primary {
+    width: 100%;
+    
+    text-align: center;
+}
+
+
+.service-item {
+    border-radius: 10px;
+    border: 1px solid var(--color-highlight);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.service-item p, .service-item h4 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.agendar-servico {
+    border: 1px solid var(--color-highlight);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.agendar-servico a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#preview-whatsapp {
+    margin-top: 20px;
+    white-space: pre-line;
+    background: #dcf8c6;      /* verdinho de balão */
+    padding: 10px 14px;
+    border-radius: 8px;
+    max-width: 320px;
 }
