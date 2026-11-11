@@ -53,7 +53,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     </div>
     <div>
         <label for="">Preco - R$</label><br>
-        <input type="number" name="preco" min="0" step="10.0" placeholder="0.00"
+        <input type="number" name="preco" min="0" step="1.0" placeholder="0.00"
             value="<?= $servico ? $servico->getPreco() : ''; ?>">
     </div>
     <div>

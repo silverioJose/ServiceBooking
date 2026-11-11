@@ -5,7 +5,7 @@
 }
 
 .agendamento-titulo{
-    font-family: 'Petit';
+    font-family: var(--font-primary);
 
     margin-bottom: 20px;
 }
@@ -23,6 +23,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 500px;
+    
+}
+
+.grid-mes button {
+    color: var(--color-text);
 }
 
 .grid-mes h3 {
@@ -34,7 +39,7 @@
     font-size: 14px;
     color: #666;
 
-    font-family: 'Playfair';
+    font-family: var(--font-secondary);
 }
 
 .calendario td {
@@ -49,22 +54,22 @@
 }
 
 .calendario td:not(.vazio):not(:empty):not(.passado):hover {
-    background-color: #f0f0f0;
+    background-color: var(--color-card);
     border-radius: 10px;
     transition: background-color 0.2s ease, transform 0.1s ease;
     cursor: pointer;
 }
 
 .calendario td.dia-atual {
-    border: 1px solid var(--color-highlight);
-    font-weight: bold;
+    background-color: var(--color-card);
+    
     border-radius: 10px;
 }
 
 .selecionado {
-    border: 1px solid black;
-    font-weight: bold;
-    border-radius: 10px;
+    border: 1px solid var(--color-highlight);
+    
+    
 }
 
 .calendario td.domingo {
@@ -126,17 +131,45 @@
     border-radius: 10px;
 }
 
+.services h2 {
+    font-family: var(--font-primary);
+}
+
 .agendar-servico a {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#horarios {
+    margin: 0 0 30px;
+}
+
+#horarios h2 {
+    margin-bottom: 20px;
+    font-family: var(--font-primary);
+}
+
+#horarios div{
+    display:grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    gap:20px
+}
+
+#horarios div p {
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+}
+
 #preview-whatsapp {
     margin-top: 20px;
     white-space: pre-line;
-    background: #dcf8c6;      /* verdinho de balão */
+    background: var(--color-card);
     padding: 10px 14px;
     border-radius: 8px;
-    max-width: 320px;
+}
+
+#pedido-btn {
+    color: var(--color-text);
 }

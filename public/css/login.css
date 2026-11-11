@@ -2,11 +2,11 @@
     background-color: var(--color-background);
     display: flex;
 
-    font-family: 'Playfair';
+    font-family: var(--font-secondary);
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    color: var(--color-text);
 }
 
 .login-box {
@@ -30,6 +30,7 @@
     padding: 5px 0;
     border: 1px solid var(--color-highlight);
     background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 .btn-login:hover {

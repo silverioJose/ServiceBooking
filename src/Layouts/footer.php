@@ -33,5 +33,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="<?php echo BASE_URL; ?>public/js/style.js"></script>
 </body>
 </html>

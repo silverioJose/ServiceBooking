@@ -17,15 +17,15 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">
+            <h1 class="hero-title" id="hero-title">
                 Realce sua <br> <span class="highlight">beleza</span> natural
             </h1>
             <hr class="line">
-            <p class="hero-subtitle">Cuidados profissionais em cada detalhe</p>
+            <p class="hero-subtitle" id="hero-subtitle">Cuidados profissionais em cada detalhe</p>
             <a href="agendar.php" class="btn-primary hero-btn">Agendar Procedimento</a>
         </div>
         <div class="hero-img">
-            <img class="img" src="public/assets/imgs/salon.jpg" alt="Imagem">
+            <img id="img-hero" class="img" src="public/assets/imgs/salon.jpg" alt="Imagem">
         </div>
     </section>
 

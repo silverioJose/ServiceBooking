@@ -12,7 +12,7 @@ html, body {
     
     flex-direction: column;
 
-    font-family: 'Playfair', serif;
+    font-family: var(--font-secondary);
 
     color: var(--color-text);
 

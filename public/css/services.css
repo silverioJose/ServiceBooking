@@ -6,9 +6,9 @@
 }
 
 .services h1 {
-    font-family: 'Petit';
+    font-family: var(--font-primary);
     margin-top: 15px;
-    margin-bottom: 15px;
+    
 }
 
 .service-item {
@@ -45,7 +45,7 @@
 }
 
 .tag-duration {
-    font-family: 'Playfair', sans-serif;
+    font-family: var(--font-secondary), sans-serif;
     font-size: 16px;
     color: var(--color-highlight);
     text-transform: uppercase;
@@ -54,14 +54,14 @@
 }
 
 .service-info h2 {
-    font-family: 'Great Vibes', sans-serif;
+    font-family: var(--font-tertiary);
     font-size: 45px;
     color: var(--color-text);
     margin-bottom: 2px;
 }
 
 .service-description {
-    font-family: 'Playfair', sans-serif;
+    font-family: var(--font-secondary), sans-serif;
     font-size: 18px;
     line-height: 1.6;
     color: var(--color-text);
@@ -76,13 +76,13 @@
     padding: 12px 28px;
     border-radius: 10px;
     text-decoration: none;
-    font-family: 'Playfair', sans-serif;
+    font-family: var(--font-secondary), sans-serif;
     font-size: 20px;
     transition: color 0.3s ease;
 }
 
 .btn-book:hover {
-    color: #C5A059;
+    color: var(--color-highlight);
 }
 
 @media (max-width: 768px) {

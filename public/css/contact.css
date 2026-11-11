@@ -1,10 +1,10 @@
 .title {
-    font-family: 'Petit';
+    font-family: var(--font-primary);
     margin-bottom: 5px;
 }
 
 .subtitle {
-    font-family: 'Playfair';
+    font-family: var(--font-secondary);
     font-size: 20px;
     margin: 0;
     margin-bottom: 10px;
@@ -19,14 +19,14 @@
     border: 1px solid var(--color-highlight);
     border-radius: 15px;
 
-    font-family: 'Playfair';
+    font-family: var(--font-secondary);
 
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
 .location-info h2 {
-    font-family: 'Petit';
+    font-family: var(--font-primary);
 }
 
 .location p small {
@@ -48,17 +48,17 @@
     overflow: hidden;
 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 300px;
+    height: 270px;
 
 }
 
 .profissionais {
-    font-family: 'Playfair';
+    font-family: var(--font-secondary);
 }
 
 .profissionais h2 {
     margin-top: 15px;
-    font-family: 'Petit';
+    font-family: var(--font-primary);
 }
 
 .profissionais-grid {

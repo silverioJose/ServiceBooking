@@ -3,6 +3,7 @@
     --color-card: #EFE8E1;
     --color-highlight: #D4AF37;
     --color-text: #3D2E2B;
+    
 
     --color-background-admin: rgb(199, 199, 199);
     --color-border-admin: rgb(148, 148, 148);
@@ -10,4 +11,10 @@
     --color-highlight2-admin: #f3f3f3;
 
     --color-attention: rgba(255, 0, 0, 0.2);
+
+    --font-primary: 'Petit', sans-serif;
+    --font-secondary: 'Playfair', sans-serif;
+    --font-tertiary: 'Great Vibes', sans-serif;
+    --font-admin: 'Poppins', sans-serif;
 }
+

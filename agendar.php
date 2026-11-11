@@ -44,13 +44,19 @@
             <h2>Seu Pedido</h2>
             <div id="pedido-itens"></div>
             <div id="pedido-btn"></div>
-
-            
-
             <div id="preview-whatsapp"></div>
         </div>
     </section>
-
+    <div id="horarios">
+        <h2>Selecione um horario</h2>
+        <div>
+            <p class="btn-primary" data-horario="08:00">08:00</p>
+            <p class="btn-primary" data-horario="10:00">10:00</p>
+            <p class="btn-primary" data-horario="12:00">12:00</p>
+            <p class="btn-primary" data-horario="14:00">14:00</p>
+            <p class="btn-primary" data-horario="16:00">16:00</p>
+        </div>
+    </div>
     <section class="services">
         <h2>Selecione o serviço</h2>
 

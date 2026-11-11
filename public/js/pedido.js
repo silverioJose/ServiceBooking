@@ -49,6 +49,7 @@ function renderizarCardPedido() {
     const button = document.createElement('button');
     button.textContent = 'Continuar';
     button.classList.add('btn-primary');
+    //link com mensagem whatsapp formatada
     const url = `https://wa.me/55NUMERO?text=${encodeURIComponent(montarMensagem())}`;
     button.addEventListener('click', function() {
         window.open(url, '_blank');
@@ -59,6 +60,7 @@ function renderizarCardPedido() {
     atualizarPreview()
 }
 
+// botao reservar em cada servico, usado para levar adquirir os dados
 document.querySelector('.services').addEventListener('click', function (event) {
     const botao = event.target.closest('.btn-book');
     if (!botao) return; // clicou em outra coisa, ignora
@@ -73,12 +75,14 @@ document.querySelector('.services').addEventListener('click', function (event) {
     renderizarCardPedido();
 });
 
+// click dos dias do calendario, usado para definir data do agendamento
 document.getElementById('calendario-corpo').addEventListener('click', function (event) {
     const td = event.target.closest('td');
     if (!td) return;
 
     if (td.classList.contains('vazio') || td.classList.contains('domingo') || td.classList.contains('passado')) return;
 
+    // css para exibição do dia marcado atual
     const anterior = document.querySelector('.selecionado');
     if (anterior) anterior.classList.remove('selecionado');
     td.classList.add('selecionado');
@@ -87,9 +91,17 @@ document.getElementById('calendario-corpo').addEventListener('click', function (
     renderizarCardPedido();
 });
 
-agendamento.horario = '15:30';
-renderizarCardPedido();   
+// click dos horarios
+document.getElementById('horarios').addEventListener('click', function(event) {
+    const p = event.target.closest('p');
+    if (!p) return;
 
+    agendamento.horario = p.dataset.horario;
+    renderizarCardPedido();
+})
+   
+
+// funcao para montagem da mensagem a ser enviada pelo whatsapp
 function montarMensagem() {
     const { servico, data, horario, cliente}  = agendamento;
     if (!servico) return '';
@@ -111,6 +123,7 @@ function montarMensagem() {
     return msg;
 }
 
+// funcao para pré exibição da mensagem
 function atualizarPreview() {
     document.getElementById('preview-whatsapp').textContent = montarMensagem();
 }

@@ -2,7 +2,7 @@
     width: 100%;
     background-color: var(--color-card);
     border-top: 1px solid var(--color-highlight);
-    font-family: 'Petit', cursive;
+    font-family: var(--font-primary);
     box-sizing: border-box;
 
     margin-top: 40px;

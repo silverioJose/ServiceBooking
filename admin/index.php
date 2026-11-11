@@ -5,26 +5,25 @@ if (isset($_GET['erro'])) {
     if ($_GET['erro'] === 'vazios') $erro = "Por favor, preencha todos os campos.";
     if ($_GET['erro'] === 'servidor') $erro = "Erro interno no servidor.";
 }
+
+require_once __DIR__ . '/../config/config.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Login - Painel Admin</title>
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>">
 </head>
 
-<body>
-    
-    <section class="login">
-        
-        <div class="login-box">
-            
+<body>  
+    <section class="login">  
+        <div class="login-box">      
             <h2>Painel Administrativo</h2><br>
             
             <?php if (!empty($erro)): ?>
-                <p style="color: red; margin-bottom: 15px;"><?= htmlspecialchars($erro) ?></p>
+                <p><?= htmlspecialchars($erro) ?></p>
             <?php endif; ?>
 
             <form action="login/login.php" method="POST">
@@ -40,14 +39,11 @@ if (isset($_GET['erro'])) {
                 <br>
                 <div class="login-grid">
                     <a class="btn-login" href="../">Sair</a>
-                    <button type="submit" class="btn-login">Entrar</button>
-                    
+                    <button type="submit" class="btn-login">Entrar</button>         
                 </div>
-                
-
             </form>
     </div>
     </section>
-
+    <script src="<?php echo BASE_URL; ?>public/js/style.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
     width: 100%;
     background-color: var(--color-card);
     border-bottom: 1px solid var(--color-highlight);
-    font-family: 'Playfair';
+    font-family: var(--font-secondary);
     box-sizing: border-box;
 
     margin-bottom: 30px;
@@ -15,7 +15,7 @@
 }
 
 .name {
-    font-family: 'Petit';
+    font-family: var(--font-primary);
     font-weight: bold;
 }
 

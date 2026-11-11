@@ -1,5 +1,5 @@
 .hero {
-    font-family: 'Petit';
+    font-family: var(--font-primary);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -19,22 +19,23 @@
 }
 
 .hero-subtitle {
-    font-family: 'Petit';
+    font-family: var(--font-primary);
 }
 
 
 .btn-primary {
-    font-family: 'Playfair', serif;
+    font-family: var(--font-secondary), serif;
     display: inline-block;
     padding: 10px;
     background-color: var(--color-card);
     border: 1px solid var(--color-highlight);
     border-radius: 15px;
     transition: color 0.3s ease-in-out;
+    color: var(--color-text);
 }
 
 .btn-primary:hover {
-    color: #C5A059;
+    color: var(--color-highlight);
 }
 
 .line {
@@ -54,7 +55,7 @@
 
 .hero-img img {
     width: 100%;
-    height: 100%;
+    height: 700px;
     object-fit: cover;
     object-position: center;
     display: block;
